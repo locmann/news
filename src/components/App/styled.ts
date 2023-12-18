@@ -7,14 +7,14 @@ export const GlobalStyles = createGlobalStyle`
     border: 0;
     scrollbar-color: #b0babf rgba(60, 70, 78, .05);
     scrollbar-width: thin;
-    
+    background-color: darkgray;
   }
 
   *, *:before, *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "Mabry Pro";
+    font-family: "Roboto";
     font-weight: 400;
     
   }

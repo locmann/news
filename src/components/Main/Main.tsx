@@ -9,8 +9,16 @@ const Main = () => {
     <p>Loading...</p>
   ) : (
     <div>
-      Main page
-      <NewsItem data={data.data[0]} />
+      {data ? (
+        data.map((m, i) => (
+          <NewsItem
+            key={i}
+            data={m}
+          />
+        ))
+      ) : (
+        <p>error</p>
+      )}
     </div>
   );
 };

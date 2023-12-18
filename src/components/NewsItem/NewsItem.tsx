@@ -2,13 +2,17 @@ import React from 'react';
 import { Description, ItemWrapper, Preview, Title } from '@components/NewsItem/styled.ts';
 import { NewsType } from '../../types/types.ts';
 
-const NewsItem: React.FC<NewsType> = ({ data }) => {
+type PropsType = {
+  data: NewsType;
+};
+
+const NewsItem: React.FC<PropsType> = (props) => {
   return (
     <ItemWrapper>
-      <Title>{data.title}</Title>
-      <Preview src={data.image_url} />
+      <Title>{props.data.title}</Title>
+      <Preview src={props.data.image_url} />
 
-      <Description>{data.description}</Description>
+      <Description>{props.data.description}</Description>
     </ItemWrapper>
   );
 };
